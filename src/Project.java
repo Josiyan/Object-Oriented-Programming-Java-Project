@@ -88,7 +88,7 @@ public class Project {
         System.out.println("3. Search Flights (by Destination)");
         System.out.println("4. Generate Report");
         System.out.println("5. List All Flights");
-        System.out.println("7. Exit");
+        System.out.println("6. Exit");
         System.out.print("Enter choice: ");
     }
 
