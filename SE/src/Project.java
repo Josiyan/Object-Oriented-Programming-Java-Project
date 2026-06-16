@@ -32,6 +32,7 @@ public class Project {
 
             switch (choice) {
                 case "1":
+                    //Replace System.out with Logger
                     LOGGER.info("Enter Flight No: ");
                     String fno = sc.nextLine().trim();
                     LOGGER.info("Enter Passenger Name: ");
@@ -41,6 +42,7 @@ public class Project {
                     break;
 
                 case "2":
+                    //Replace System.out with Logger
                     LOGGER.info("Enter Flight No: ");
                     String cno = sc.nextLine().trim();
                     LOGGER.info("Enter Passenger Name: ");
@@ -50,6 +52,7 @@ public class Project {
                     break;
 
                 case "3":
+                    //Replace System.out with Logger
                     LOGGER.info("Enter Destination: ");
                     String dest = sc.nextLine().trim();
                     List<Flight> results = flightManager.searchFlightsByDestination(dest);
