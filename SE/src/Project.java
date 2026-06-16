@@ -4,6 +4,8 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class Project {
+    // Logger configuration updated
+
     private static final Logger LOGGER=Logger.getLogger(Project.class.getName());
     private static final String FLIGHTS_FILE = "flights.txt";
     private static final String BOOKINGS_FILE = "bookings.txt";
@@ -21,6 +23,7 @@ public class Project {
         flightManager.loadFlights(FLIGHTS_FILE);
         Map<String, Flight> flights = flightManager.getFlights();
 
+        //Replace System.out with Logger
         LOGGER.info("Loaded " + flights.size() + " flights.");
 
         while (true) {
