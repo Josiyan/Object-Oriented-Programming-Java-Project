@@ -2,9 +2,9 @@
 
 import java.util.*;
 import java.util.logging.Logger;
-
+// Logger configuration updated
 public class Project {
-    // Logger configuration updated
+    // Add logger configuration comments
 
     private static final Logger LOGGER=Logger.getLogger(Project.class.getName());
     private static final String FLIGHTS_FILE = "flights.txt";
