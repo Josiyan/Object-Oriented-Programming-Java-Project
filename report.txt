@@ -1,0 +1,8 @@
+=== Daily Report ===
+
+Bookings:
+josiyan,UL101
+croos,EK225
+
+Cancellations:
+Sathu,UL101
