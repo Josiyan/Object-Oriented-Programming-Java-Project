@@ -11,6 +11,7 @@ public class Flight {
         this.seats = seats;
     }
 
+<<<<<<< HEAD
     public String getFlightNo() { return flightNo; }
     public String getOrigin() { return origin; }
     public String getDestination() { return destination; }
@@ -21,5 +22,29 @@ public class Flight {
     @Override
     public String toString() {
         return flightNo + "," + origin + "," + destination + "," + seats;
+=======
+    public String getFlightNo() {
+        return this.flightNo;
+    }
+
+    public String getOrigin() {
+        return this.origin;
+    }
+
+    public String getDestination() {
+        return this.destination;
+    }
+
+    public int getSeats() {
+        return this.seats;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
+    public String toString() {
+        return this.flightNo + "," + this.origin + "," + this.destination + "," + this.seats;
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
     }
 }

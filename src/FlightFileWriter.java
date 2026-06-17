@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import java.io.*;
+=======
+import java.io.FileWriter;
+import java.io.IOException;
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
 
 public class FlightFileWriter {
     public static boolean writeFile(String flightsFile) {
         try {
+<<<<<<< HEAD
             FileWriter writer = new FileWriter(flightsFile); // creates or overwrites file
+=======
+            FileWriter writer = new FileWriter(flightsFile);
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
             writer.write("UL101,Colombo,London,5\n");
             writer.write("EK225,Dubai,New York,10\n");
             writer.write("QR320,Doha,Paris,8\n");

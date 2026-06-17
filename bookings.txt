@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 josiyan,UL101
 croos,EK225
 Sathu,SQ305
+=======
+,AI274
+sharu,QR320
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)

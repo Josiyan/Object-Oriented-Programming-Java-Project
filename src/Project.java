@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import java.util.*;
+=======
+import java.io.PrintStream;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
 
 public class Project {
     private static final String FLIGHTS_FILE = "flights.txt";
@@ -11,6 +18,7 @@ public class Project {
         FlightManager flightManager = new FlightManager();
         BookingManager bookingManager = new BookingManager();
         ReportManager reportManager = new ReportManager();
+<<<<<<< HEAD
 
         ensureSampleFlightsExist();
 
@@ -24,24 +32,48 @@ public class Project {
             String choice = sc.nextLine().trim();
 
             switch (choice) {
+=======
+        ensureSampleFlightsExist();
+        flightManager.loadFlights("flights.txt");
+        Map<String, Flight> flights = flightManager.getFlights();
+        System.out.println("Loaded " + flights.size() + " flights.");
+
+        while(true) {
+            showMenu();
+            switch (sc.nextLine().trim()) {
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
                 case "1":
                     System.out.print("Enter Flight No: ");
                     String fno = sc.nextLine().trim();
                     System.out.print("Enter Passenger Name: ");
                     Passenger p1 = new Passenger(sc.nextLine().trim());
+<<<<<<< HEAD
                     if (bookingManager.bookTicket(flights, p1, fno, BOOKINGS_FILE))
                         flightManager.saveFlights(FLIGHTS_FILE);
                     break;
 
+=======
+                    if (bookingManager.bookTicket(flights, p1, fno, "bookings.txt")) {
+                        flightManager.saveFlights("flights.txt");
+                    }
+                    break;
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
                 case "2":
                     System.out.print("Enter Flight No: ");
                     String cno = sc.nextLine().trim();
                     System.out.print("Enter Passenger Name: ");
                     Passenger p2 = new Passenger(sc.nextLine().trim());
+<<<<<<< HEAD
                     if (bookingManager.cancelTicket(flights, p2, cno, BOOKINGS_FILE, CANCELLATIONS_FILE))
                         flightManager.saveFlights(FLIGHTS_FILE);
                     break;
 
+=======
+                    if (bookingManager.cancelTicket(flights, p2, cno, "bookings.txt", "cancellations.txt")) {
+                        flightManager.saveFlights("flights.txt");
+                    }
+                    break;
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
                 case "3":
                     System.out.print("Enter Destination: ");
                     String dest = sc.nextLine().trim();
@@ -50,6 +82,7 @@ public class Project {
                         System.out.println("No flights found to " + dest + ".");
                     } else {
                         System.out.println("Available flights to " + dest + ":");
+<<<<<<< HEAD
                         for (Flight f : results) {
                             System.out.println(" - " + f.getFlightNo() + " : " + f.getOrigin() + " -> " + f.getDestination() + " (Seats: " + f.getSeats() + ")");
                         }
@@ -70,11 +103,40 @@ public class Project {
                     }
                     break;
 
+=======
+
+                        for(Flight f : results) {
+                            PrintStream var19 = System.out;
+                            String var20 = f.getFlightNo();
+                            var19.println(" - " + var20 + " : " + f.getOrigin() + " -> " + f.getDestination() + " (Seats: " + f.getSeats() + ")");
+                        }
+                    }
+                    break;
+                case "4":
+                    reportManager.generateReport("bookings.txt", "cancellations.txt", "report.txt");
+                    break;
+                case "5":
+                    if (flights.isEmpty()) {
+                        System.out.println("No flights loaded.");
+                    } else {
+                        System.out.println("All flights:");
+
+                        for(Flight f : flights.values()) {
+                            PrintStream var10000 = System.out;
+                            String var10001 = f.getFlightNo();
+                            var10000.println(" - " + var10001 + " : " + f.getOrigin() + " -> " + f.getDestination() + " (Seats: " + f.getSeats() + ")");
+                        }
+                    }
+                    break;
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
                 case "6":
                     System.out.println("Exiting system... Goodbye!");
                     sc.close();
                     return;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
                 default:
                     System.out.println("Invalid choice. Enter 1–6.");
             }
@@ -93,11 +155,24 @@ public class Project {
     }
 
     private static void ensureSampleFlightsExist() {
+<<<<<<< HEAD
         if (!FileUtils.exists(FLIGHTS_FILE)) {
             System.out.println("Creating sample flights.txt...");
             boolean success = FlightFileWriter.writeFile(FLIGHTS_FILE);
             if (success) System.out.println("flights.txt created successfully.");
             else System.out.println("Failed to create flights.txt.");
         }
+=======
+        if (!FileUtils.exists("flights.txt")) {
+            System.out.println("Creating sample flights.txt...");
+            boolean success = FlightFileWriter.writeFile("flights.txt");
+            if (success) {
+                System.out.println("✅ flights.txt created successfully.");
+            } else {
+                System.out.println("❌ Failed to create flights.txt.");
+            }
+        }
+
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
     }
 }

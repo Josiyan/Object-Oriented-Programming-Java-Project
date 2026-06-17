@@ -8,6 +8,7 @@ public class Booking {
     }
 
     public Passenger getPassenger() {
+<<<<<<< HEAD
         return passenger;
     }
     public Flight getFlight() {
@@ -17,5 +18,17 @@ public class Booking {
     @Override
     public String toString() {
         return passenger.getName() + "," + flight.getFlightNo();
+=======
+        return this.passenger;
+    }
+
+    public Flight getFlight() {
+        return this.flight;
+    }
+
+    public String toString() {
+        String var10000 = this.passenger.getName();
+        return var10000 + "," + this.flight.getFlightNo();
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
     }
 }

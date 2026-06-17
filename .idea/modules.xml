@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/P.Tutorial 01/P.Tutorial 01.iml" filepath="$PROJECT_DIR$/P.Tutorial 01/P.Tutorial 01.iml" />
       <module fileurl="file://$PROJECT_DIR$/class.iml" filepath="$PROJECT_DIR$/class.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/OOP Project.iml" filepath="$PROJECT_DIR$/OOP Project.iml" />
+>>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
     </modules>
   </component>
 </project>
