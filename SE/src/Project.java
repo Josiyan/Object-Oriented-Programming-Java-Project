@@ -12,7 +12,7 @@ public class Project {
     private static final String CANCELLATIONS_FILE = "cancellations.txt";
     private static final String REPORT_FILE = "report.txt";
 
-    // Managers matrum Scanner-ah class level-ku mathi complexity-ah koraika udhavuthu
+
     private static final FlightManager flightManager = new FlightManager();
     private static final BookingManager bookingManager = new BookingManager();
     private static final ReportManager reportManager = new ReportManager();
@@ -24,7 +24,7 @@ public class Project {
         flightManager.loadFlights(FLIGHTS_FILE);
         Map<String, Flight> flights = flightManager.getFlights();
 
-        // FIX: java:S2629 - Replace string concatenation with built-in formatting
+        // FIX:Replace string concatenation with built-in formatting
         LOGGER.log(Level.INFO, "Loaded {0} flights.", flights.size());
 
         while (true) {
