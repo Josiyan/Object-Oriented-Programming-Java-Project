@@ -1,6 +1,6 @@
 public class Passenger {
     private String name;
-
+//Fix SonarQube issues and update Passenger clas
     public Passenger(String name) {
         this.name = name;
     }

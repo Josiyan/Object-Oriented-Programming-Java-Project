@@ -1,7 +1,7 @@
 public class Booking {
     private Passenger passenger;
     private Flight flight;
-
+//Fix SonarQube issues and update Booking clas
     public Booking(Passenger passenger, Flight flight) {
         this.passenger = passenger;
         this.flight = flight;
@@ -28,6 +28,7 @@ public class Booking {
 
     public String toString() {
         String var10000 = this.passenger.getName();
+
         return var10000 + "," + this.flight.getFlightNo();
 >>>>>>> e2b56e2 (Resolve SonarQube issues and update Passenger class)
     }
