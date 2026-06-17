@@ -1,7 +1,7 @@
 public class Booking {
     private Passenger passenger;
     private Flight flight;
-//Fix SonarQube issues and update Booking clas
+//Fix SonarQube issues and update Booking class
     public Booking(Passenger passenger, Flight flight) {
     s    this.passenger = passenger;
         this.flight = flight;
